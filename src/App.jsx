@@ -11,7 +11,7 @@ function App() {
 			{/* <!-- Week 18 --> */}
 			<div className='week-section'>
 				<div className='week-header'>
-					<span>Week 18 - Regular Season</span>
+					<span>Week 18 - Play-ins & Playoffs</span>
 					<span className='week-date'>June 21, 2025</span>
 				</div>
 				<div className='games-grid'>
@@ -21,9 +21,9 @@ function App() {
 							<div className='team-matchup'>
 								Kicks Rig-Out <span className='vs'>VS</span> KGR Dragons
 							</div>
-							<div className='game-type'>Play-In Game</div>
+							<div className='game-type'>Play-Ins</div>
 						</div>
-						<div className='game-status status-scheduled'>Scheduled</div>
+						<div className='game-status status-scheduled'>Play-in</div>
 					</div>
 
 					<div className='game-card'>
@@ -32,9 +32,9 @@ function App() {
 							<div className='team-matchup'>
 								888 Bilyaran <span className='vs'>VS</span> Rice Realtors
 							</div>
-							<div className='game-type'>Regular Season</div>
+							<div className='game-type'>Playoffs</div>
 						</div>
-						<div className='game-status status-scheduled'>Scheduled</div>
+						<div className='game-status status-playoff'>Playoffs</div>
 					</div>
 
 					<div className='game-card'>
@@ -43,9 +43,9 @@ function App() {
 							<div className='team-matchup'>
 								ACES Commercial <span className='vs'>VS</span> Snipers
 							</div>
-							<div className='game-type'>Regular Season</div>
+							<div className='game-type'>Playoffs</div>
 						</div>
-						<div className='game-status status-scheduled'>Scheduled</div>
+						<div className='game-status status-playoff'>Playoffs</div>
 					</div>
 
 					<div className='game-card'>
@@ -54,9 +54,9 @@ function App() {
 							<div className='team-matchup'>
 								El Patron x Usana <span className='vs'>VS</span> Versatile
 							</div>
-							<div className='game-type'>Regular Season</div>
+							<div className='game-type'>Playoffs</div>
 						</div>
-						<div className='game-status status-scheduled'>Scheduled</div>
+						<div className='game-status status-playoff'>Playoffs</div>
 					</div>
 				</div>
 			</div>
@@ -72,8 +72,7 @@ function App() {
 						<div className='game-time'>4:00 PM</div>
 						<div className='game-details'>
 							<div className='team-matchup'>
-								A3 Phoenix Stone <span className='vs'>VS</span> Winner of the
-								DRG vs KRO
+								A3 Phoenix Stone <span className='vs'>VS</span> 8th Seed
 							</div>
 							<div className='game-type'>Quarterfinals</div>
 						</div>
@@ -126,7 +125,7 @@ function App() {
 						<div className='game-time'>5:00 PM</div>
 						<div className='game-details'>
 							<div className='team-matchup'>
-								A3 Phoenix Stone <span className='vs'>VS</span> KRO / Dragons
+								A3 Phoenix Stone <span className='vs'>VS</span> 8th Seed
 							</div>
 							<div className='game-type'>Quarterfinals (Game 2)</div>
 						</div>
@@ -196,7 +195,7 @@ function App() {
 				<div className='legend-items'>
 					<div className='legend-item'>
 						<div className='legend-color legend-color-green'></div>
-						<span>Regular Season</span>
+						<span>Play-ins</span>
 					</div>
 					<div className='legend-item'>
 						<div className='legend-color legend-color-orange'></div>
