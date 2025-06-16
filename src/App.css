@@ -1,42 +1,331 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+	height: 6em;
+	padding: 1.5em;
+	will-change: filter;
+	transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+	filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+	filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+	a:nth-of-type(2) .logo {
+		animation: logo-spin infinite 20s linear;
+	}
 }
 
 .card {
-  padding: 2em;
+	padding: 2em;
 }
 
 .read-the-docs {
-  color: #888;
+	color: #888;
+}
+
+/* KGRBL Dashboard CSS */
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(10px);
+	border-radius: 20px;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.header {
+	background: linear-gradient(
+		135deg,
+		rgba(255, 107, 107, 0.8),
+		rgba(238, 90, 36, 0.8)
+	);
+	color: white;
+	padding: 30px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/* background-image: url('https://i.imgur.com/Nl7XP9x.jpg'); */
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0.3;
+	z-index: 0;
+}
+
+@keyframes float {
+	0% {
+		transform: translateX(0) translateY(0);
+	}
+	100% {
+		transform: translateX(-50px) translateY(-50px);
+	}
+}
+
+.header h1 {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: 10px;
+	position: relative;
+	z-index: 1;
+}
+
+.header p {
+	font-size: 1.1rem;
+	opacity: 0.9;
+	position: relative;
+	z-index: 1;
+}
+
+.week-section {
+	margin: 30px;
+	background: white;
+	border-radius: 15px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.week-section:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.week-header {
+	background: linear-gradient(135deg, #4facfe, #00f2fe);
+	color: white;
+	padding: 20px;
+	font-size: 1.3rem;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.week-date {
+	font-size: 0.9rem;
+	opacity: 0.9;
+}
+
+.games-grid {
+	padding: 25px;
+}
+
+.game-card {
+	background: linear-gradient(135deg, #f8f9ff, #e8f1ff);
+	border-left: 4px solid #4facfe;
+	border-radius: 12px;
+	padding: 20px;
+	margin-bottom: 15px;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	gap: 20px;
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.game-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(255, 255, 255, 0.4),
+		transparent
+	);
+	transition: left 0.5s ease;
+}
+
+.game-card:hover::before {
+	left: 100%;
+}
+
+.game-card:hover {
+	transform: translateX(5px);
+	box-shadow: 0 8px 20px rgba(79, 172, 254, 0.2);
+	border-left-color: #ff6b6b;
+}
+
+.game-time {
+	background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+	color: white;
+	padding: 12px 16px;
+	border-radius: 25px;
+	font-weight: 600;
+	font-size: 0.9rem;
+	text-align: center;
+	min-width: 80px;
+	box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.game-details {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.team-matchup {
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: #2d3748;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.vs {
+	background: linear-gradient(135deg, #667eea, #764ba2);
+	color: white;
+	padding: 4px 12px;
+	border-radius: 15px;
+	font-size: 0.8rem;
+	font-weight: 500;
+}
+
+.game-type {
+	font-size: 0.85rem;
+	color: #666;
+	font-style: italic;
+}
+
+.game-status {
+	padding: 8px 16px;
+	border-radius: 20px;
+	font-size: 0.8rem;
+	font-weight: 500;
+	text-align: center;
+}
+
+.status-scheduled {
+	background: linear-gradient(135deg, #48bb78, #38a169);
+	color: white;
+}
+
+.status-playoff {
+	background: linear-gradient(135deg, #ed8936, #dd6b20);
+	color: white;
+}
+
+.status-semi {
+	background: linear-gradient(135deg, #9f7aea, #805ad5);
+	color: white;
+}
+
+.status-finals {
+	background: linear-gradient(135deg, #f56565, #e53e3e);
+	color: white;
+}
+
+.empty-week {
+	text-align: center;
+	padding: 40px;
+	color: #a0aec0;
+	font-style: italic;
+}
+
+.legend {
+	margin: 30px;
+	padding: 20px;
+	background: linear-gradient(135deg, #f7fafc, #edf2f7);
+	border-radius: 15px;
+	border: 1px solid #e2e8f0;
+}
+
+.legend h3 {
+	color: #2d3748;
+	margin-bottom: 15px;
+	font-size: 1.1rem;
+}
+
+.legend-items {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+.legend-item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 0.9rem;
+}
+
+.legend-item span {
+	color: #666;
+}
+
+.legend-color {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+}
+
+.legend-color-green {
+	background: linear-gradient(135deg, #48bb78, #38a169);
+}
+
+.legend-color-orange {
+	background: linear-gradient(135deg, #ed8936, #dd6b20);
+}
+
+.legend-color-purple {
+	background: linear-gradient(135deg, #9f7aea, #805ad5);
+}
+
+.legend-color-red {
+	background: linear-gradient(135deg, #f56565, #e53e3e);
+}
+
+@media (max-width: 768px) {
+	.header h1 {
+		font-size: 2rem;
+	}
+
+	.game-card {
+		grid-template-columns: 1fr;
+		text-align: center;
+		gap: 15px;
+	}
+
+	.team-matchup {
+		justify-content: center;
+	}
+
+	.legend-items {
+		justify-content: center;
+	}
 }
