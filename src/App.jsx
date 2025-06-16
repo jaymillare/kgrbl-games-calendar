@@ -1,35 +1,219 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+	return (
+		<div className='container'>
+			<div className='header'>
+				<h1>⛩️ KGR Basketball League</h1>
+				<p>Season 5 Quarterfinals Schedule</p>
+			</div>
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+			{/* <!-- Week 18 --> */}
+			<div className='week-section'>
+				<div className='week-header'>
+					<span>Week 18 - Regular Season</span>
+					<span className='week-date'>June 21, 2025</span>
+				</div>
+				<div className='games-grid'>
+					<div className='game-card'>
+						<div className='game-time'>4:00 PM</div>
+						<div className='game-details'>
+							<div className='team-matchup'>
+								Kicks Rig-Out <span className='vs'>VS</span> KGR Dragons
+							</div>
+							<div className='game-type'>Play-In Game</div>
+						</div>
+						<div className='game-status status-scheduled'>Scheduled</div>
+					</div>
+
+					<div className='game-card'>
+						<div className='game-time'>5:00 PM</div>
+						<div className='game-details'>
+							<div className='team-matchup'>
+								888 Bilyaran <span className='vs'>VS</span> Rice Realtors
+							</div>
+							<div className='game-type'>Regular Season</div>
+						</div>
+						<div className='game-status status-scheduled'>Scheduled</div>
+					</div>
+
+					<div className='game-card'>
+						<div className='game-time'>6:30 PM</div>
+						<div className='game-details'>
+							<div className='team-matchup'>
+								ACES Commercial <span className='vs'>VS</span> Snipers
+							</div>
+							<div className='game-type'>Regular Season</div>
+						</div>
+						<div className='game-status status-scheduled'>Scheduled</div>
+					</div>
+
+					<div className='game-card'>
+						<div className='game-time'>7:30 PM</div>
+						<div className='game-details'>
+							<div className='team-matchup'>
+								El Patron x Usana <span className='vs'>VS</span> Versatile
+							</div>
+							<div className='game-type'>Regular Season</div>
+						</div>
+						<div className='game-status status-scheduled'>Scheduled</div>
+					</div>
+				</div>
+			</div>
+
+			{/* <!-- Week 19 - Quarterfinals --> */}
+			<div className='week-section'>
+				<div className='week-header'>
+					<span>Week 19 - Quarterfinals</span>
+					<span className='week-date'>June 28, 2025</span>
+				</div>
+				<div className='games-grid'>
+					<div className='game-card'>
+						<div className='game-time'>4:00 PM</div>
+						<div className='game-details'>
+							<div className='team-matchup'>
+								A3 Phoenix Stone <span className='vs'>VS</span> Winner of the
+								DRG vs KRO
+							</div>
+							<div className='game-type'>Quarterfinals</div>
+						</div>
+						<div className='game-status status-playoff'>Playoffs</div>
+					</div>
+
+					<div className='game-card'>
+						<div className='game-time'>5:00 PM</div>
+						<div className='game-details'>
+							<div className='team-matchup'>
+								888 Bilyaran <span className='vs'>VS</span> Rice Realtors
+							</div>
+							<div className='game-type'>Quarterfinals (Game 2)</div>
+						</div>
+						<div className='game-status status-playoff'>Playoffs</div>
+					</div>
+
+					<div className='game-card'>
+						<div className='game-time'>6:30 PM</div>
+						<div className='game-details'>
+							<div className='team-matchup'>
+								ACES Commercial<span className='vs'>VS</span> Snipers
+							</div>
+							<div className='game-type'>Quarterfinals (Game 2)</div>
+						</div>
+						<div className='game-status status-playoff'>Playoffs</div>
+					</div>
+
+					<div className='game-card'>
+						<div className='game-time'>7:30 PM</div>
+						<div className='game-details'>
+							<div className='team-matchup'>
+								El Patron x Usana <span className='vs'>VS</span> Versatile
+							</div>
+							<div className='game-type'>Quarterfinals (Game 2)</div>
+						</div>
+						<div className='game-status status-playoff'>Playoffs</div>
+					</div>
+				</div>
+			</div>
+
+			{/* <!-- Week 20 - Quarterfinals Game 3 --> */}
+			<div className='week-section'>
+				<div className='week-header'>
+					<span>Week 20 - Quarterfinals (If Needed)</span>
+					<span className='week-date'>July 5, 2025</span>
+				</div>
+				<div className='games-grid'>
+					<div className='game-card'>
+						<div className='game-time'>5:00 PM</div>
+						<div className='game-details'>
+							<div className='team-matchup'>
+								A3 Phoenix Stone <span className='vs'>VS</span> KRO / Dragons
+							</div>
+							<div className='game-type'>Quarterfinals (Game 2)</div>
+						</div>
+						<div className='game-status status-playoff'>If Needed</div>
+					</div>
+
+					<div className='game-card'>
+						<div className='game-time'>6:30 PM</div>
+						<div className='game-details'>
+							<div className='team-matchup'>
+								QTR Finals Winner <span className='vs'>VS</span> QTR Finals
+								Winner
+							</div>
+							<div className='game-type'>Quarterfinals (3/6)</div>
+						</div>
+						<div className='game-status status-playoff'>Conditional</div>
+					</div>
+				</div>
+			</div>
+
+			{/* <!-- Week 21 - Semifinals --> */}
+			<div className='week-section'>
+				<div className='week-header'>
+					<span>Week 21 - Semifinals</span>
+					<span className='week-date'>July 12, 2025</span>
+				</div>
+				<div className='games-grid'>
+					<div className='empty-week'>
+						Games to be scheduled based on quarterfinal results
+					</div>
+				</div>
+			</div>
+
+			{/* <!-- Week 22 - Finals --> */}
+			<div className='week-section'>
+				<div className='week-header'>
+					<span>Week 22 - Finals</span>
+					<span className='week-date'>July 19, 2025</span>
+				</div>
+				<div className='games-grid'>
+					<div className='game-card'>
+						<div className='game-time'>5:00 PM</div>
+						<div className='game-details'>
+							<div className='team-matchup'>
+								Semifinal Winner <span className='vs'>VS</span> Semifinal Winner
+							</div>
+							<div className='game-type'>Championship Game</div>
+						</div>
+						<div className='game-status status-finals'>Finals</div>
+					</div>
+
+					<div className='game-card'>
+						<div className='game-time'>6:30 PM</div>
+						<div className='game-details'>
+							<div className='team-matchup'>
+								Game 2 (If Needed) <span className='vs'>VS</span> TBD
+							</div>
+							<div className='game-type'>Championship Series</div>
+						</div>
+						<div className='game-status status-finals'>If Needed</div>
+					</div>
+				</div>
+			</div>
+
+			<div className='legend'>
+				<h3>Schedule Legend</h3>
+				<div className='legend-items'>
+					<div className='legend-item'>
+						<div className='legend-color legend-color-green'></div>
+						<span>Regular Season</span>
+					</div>
+					<div className='legend-item'>
+						<div className='legend-color legend-color-orange'></div>
+						<span>Playoffs</span>
+					</div>
+					<div className='legend-item'>
+						<div className='legend-color legend-color-purple'></div>
+						<span>Semifinals</span>
+					</div>
+					<div className='legend-item'>
+						<div className='legend-color legend-color-red'></div>
+						<span>Finals</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
 
-export default App
+export default App;
